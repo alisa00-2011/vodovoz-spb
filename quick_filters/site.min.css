@@ -10166,22 +10166,48 @@ a.b-autoComplete_footer_btn {
 	}
 }
 
-.b-sidebar_nav_menu {
-	list-style: none
+.b-sidebar_nav_menu{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .b-sidebar_nav_menu a {
-	text-decoration: none;
-	color: #1883c6;
-	border-bottom: 1px solid
+    display:inline-block;
+    padding: 8px;
+    text-decoration: none;
+    color: #FF7A01;
+    border-radius: 5px;
+    background: #FFF;
+}
+.b-sidebar_nav_menu a:hover {
+    background: #FFA24E;
+    color:#FFF;
 }
 
-.b-sidebar_nav_menu a:hover {
-	color: #ef7900
+.b-sidebar_nav_menu a:active {
+    background: #FF7A01;
+    color:#FFF;
 }
+
+.b-sidebar_nav_menu a:active::after {
+    margin-left: 8px;
+    align-content: center;
+    content: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3e%3ccircle cx='7' cy='7' r='7' fill='white'/%3e%3cpath d='M3.5 3.5L7 7M10.5 10.5L7 7M3.5 10.5L5.25 8.75L7 7M7 7L10.5 3.5' stroke='%23FF7A01' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+
+ul.b-sidebar_nav_menu {
+    display: flex;
+   flex-flow: row wrap;
+   justify-content: flex-start;
+   align-items: baseline;
+}
+
 
 .b-sidebar_nav_menu>li {
-	padding-left: 14px
+    padding-right: 5px
 }
 
 .b-sidebar_nav_menu>li~li {
@@ -10193,33 +10219,22 @@ a.b-autoComplete_footer_btn {
 	font: 400 22px/1 'Cuprum', sans-serif
 }
 
-.b-sidebar_nav_menu>li>a:before {
-	position: absolute;
-	left: -14px;
-	top: 10px;
-	width: 4px;
-	height: 4px;
-	background: #ef7900;
-	content: ''
+.selected_item {
+    order: -1;
+}
+
+.selected_item a{
+    background: #FF7A01;
+    color:#FFF;
+}
+
+.selected_item a::after {
+    margin-left: 8px;
+    align-content: center;
+    content: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3e%3ccircle cx='7' cy='7' r='7' fill='white'/%3e%3cpath d='M3.5 3.5L7 7M10.5 10.5L7 7M3.5 10.5L5.25 8.75L7 7M7 7L10.5 3.5' stroke='%23FF7A01' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e");
 }
 
 @media(max-width:767px) {
-	.b-sidebar_nav_menu {
-		position: relative;
-		margin-left: -14px
-	}
-
-	.b-sidebar_nav_menu:before {
-		position: absolute;
-		z-index: 5;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		width: 14px;
-		background: #eafbff;
-		content: ''
-	}
-
 	.b-sidebar_nav_menu>li {
 		display: inline-block;
 		margin-right: 10px;
