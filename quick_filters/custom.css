@@ -203,7 +203,12 @@
 
 .descr_full.b-page_columns{
 	margin-top:0;
-	margin-bottom:40px;
+	margin-bottom:20px;
+}
+
+.quick_filters.b-page_columns{
+	margin-top:0;
+	margin-bottom:20px;
 }
 .item_descr{
 	width:100%;
